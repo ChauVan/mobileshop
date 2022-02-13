@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="25dp">
+
+
+            <TextView
+                android:id="@+id/txtBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_bat"
+                android:paddingLeft="8dp"
+                android:paddingTop="3dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+                android:text="Bỏ qua"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="PC"
+                android:textSize="100dp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toTopOf="@+id/gl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="nhập tài khoản"
+                app:endIconMode="clear_text"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gl"
+                app:startIconDrawable="@drawable/ic_baseline_person_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editLoginActivityUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="nhập tài khoản"
+                app:endIconMode="password_toggle"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayout"
+                app:startIconDrawable="@drawable/ic_baseline_https_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editLoginActivityPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/txtLoginActivityForePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Quên mật khẩu?"
+                android:textColor="@color/donhat"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayout1" />
+
+            <CheckBox
+                android:id="@+id/cbLoginActivitySave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lưu thông tin đăng nhập"
+                android:textSize="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtLoginActivityForePassword" />
+
+            <Button
+                android:id="@+id/btnLoginActivityLogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_login"
+                android:text="Đăng nhập"
+                app:backgroundTint="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cbLoginActivitySave" />
+
+            <TextView
+                android:id="@+id/txtLoginActivityOr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Hoặc đăng nhập bằng"
+                android:textSize="18dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnLoginActivityLogin" />
+
+            <ImageView
+                android:id="@+id/imgLoginActivityFB"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/fb_icon_325x325"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/imgLoginActivityGG"
+                app:layout_constraintTop_toBottomOf="@id/txtLoginActivityOr" />
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_fb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/imgLoginActivityGG"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/gg"
+                app:layout_constraintLeft_toRightOf="@id/imgLoginActivityFB"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtLoginActivityOr" />
+
+            <TextView
+                android:id="@+id/txtLoginActivityDK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:text="Chưa có tài khoản? "
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/txtLoginActivitySignUp"
+                app:layout_constraintTop_toBottomOf="@+id/imgLoginActivityFB" />
+
+            <TextView
+                android:id="@+id/txtLoginActivitySignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:text="Đăng ký"
+                android:textColor="@color/donhat"
+                app:layout_constraintLeft_toRightOf="@id/txtLoginActivityDK"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgLoginActivityGG" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

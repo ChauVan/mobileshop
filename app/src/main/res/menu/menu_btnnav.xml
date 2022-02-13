@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_Home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Trang chủ" />
+
+    <item
+        android:id="@+id/navigation_Like"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="Yêu thích" />
+
+    <item
+        android:id="@+id/navigation_Notify"
+        android:icon="@drawable/ic_baseline_notifications_24"
+        android:title="Thông báo" />
+
+    <item
+        android:id="@+id/navigation_Mess"
+        android:icon="@drawable/ic_baseline_chat_24"
+        android:title="Tin nhắm" />
+
+    <item
+        android:id="@+id/navigation_Profile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Hồ sơ" />
+</menu>

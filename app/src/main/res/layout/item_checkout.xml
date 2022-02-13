@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    tools:context=".Item.Item_Cart">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imgItemCartPhotoCheckout"
+            android:src="@drawable/xiaomi_mi_11"
+            android:layout_marginLeft="10dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/txtItemCartProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="xiaomi mi 11 China"
+                android:layout_marginRight="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.28" />
+
+            <TextView
+                android:id="@+id/txtItemCartProductPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="21.000.000đ"
+                android:textColor="@color/donhat"
+                app:layout_constraintTop_toBottomOf="@+id/txtItemCartProductName" />
+
+            <TextView
+                android:id="@+id/txtProductNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X1"
+                android:textSize="19dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
